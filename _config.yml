@@ -21,3 +21,6 @@ url: "http://zachdyer.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+
+gems:
+  site-jekyll
