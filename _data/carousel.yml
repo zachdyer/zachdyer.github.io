@@ -1,17 +1,17 @@
-- title: Example headline.
-  desc: "Note: If you're viewing this page via a <code>file://</code> URL, the \"next\" and \"previous\" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules."
-  img: data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==
-  link: /
-  button: Sign up today
+- title: Zach Dyer Design
+  desc: I live in Ozark, Missouri where I am the lead designer at Zach Dyer Design.
+  img: /img/my-office.jpg
+  link: http://zachdyerdesign.com
+  button: Learn More
 
-- title: Another example headline.
-  desc: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-  img: data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==
+- title: One Heart
+  desc: I help collect food donations and redistribute them to families in need at One Heart.
+  img: /img/one-heart-slide.jpg
   link: /
   button: Learn more
 
-- title: One more for good measure.
-  desc: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-  img: data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==
+- title: Going green
+  desc: I commute to my office each day on bike to help save money on gas, gym, and carbon emissions.
+  img: /img/bike.jpg
   link: /
-  button: Browse gallery
+  button: Learn More

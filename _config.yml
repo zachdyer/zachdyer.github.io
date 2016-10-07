@@ -23,4 +23,4 @@ url: "http://zachdyer.com" # the base hostname & protocol for your site
 markdown: kramdown
 
 gems:
-  site-jekyll
+  - jekyll-sitemap
