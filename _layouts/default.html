@@ -7,8 +7,8 @@
 
     {% include header.html %}
 
-    {% if site.data.config.slider %}
-    {% include carousel.html %}
+    {% if site.data.settings.slider %}
+    {% include fixed-width-carousel.html %}
     {% endif %}
 
     <!-- Marketing messaging and featurettes
@@ -17,7 +17,7 @@
 
     <div class="container marketing">
 
-      {% if site.data.config.shoutout  %}
+      {% if site.data.settings.shoutout  %}
       {% include shoutout.html %}
       {% endif %}
 

@@ -14,10 +14,18 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Zach Dyer
+description: Jekyll starter template for Zach Dyer Design
+
+address:
+city: Ozark
+state: MO
+zip: 65721
 email: zach.dyer@gmail.com
 phone: +1 417 501 5670
-description: Jekyll starter template for Zach Dyer Design
+
 url: "http://zachdyer.com" # the base hostname & protocol for your site
+
+
 
 # Build settings
 markdown: kramdown

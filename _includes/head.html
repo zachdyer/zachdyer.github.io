@@ -6,12 +6,17 @@
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="Zach Dyer Design">
-  <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+  {% include favicon.html %}
 
   <title>{{ site.title }}</title>
 
   <!-- Bootstrap core CSS -->
   <link href="{{ site.github.url }}/css/bootstrap.min.css" rel="stylesheet">
+
+  {% if site.data.settings.nav == "fixed" %}
+  <link href="{{ site.github.url }}/css/theme.css" rel="stylesheet">
+  {% endif %}
 
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <link href="{{ site.github.url }}/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
