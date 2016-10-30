@@ -1,13 +1,14 @@
-- title: Zach Dyer Design
-  desc: I live in Ozark, Missouri where I am the lead designer at Zach Dyer Design.
-  img: /img/my-office.jpg
-  link: http://zachdyerdesign.com
+- title: Chrome Rogue
+  desc: A topdown roguelike game! This game is in active development.
+  img: /img/chrome-rogue.jpg
+  link: https://github.com/zachdyer/chrome-rogue/
+  target: _blank
   button: Learn More
 
-- title: Giving back
-  desc: I help collect food donations and redistribute them to families in need at One Heart.
-  img: /img/one-heart-slide.jpg
-  link: /
+- title: Spaceship
+  desc: This is a HTML5 spaceship game. Use the mouse to move the ship around and left click to shoot UFOs.
+  img: /img/spaceship.jpg
+  link: https://github.com/zachdyer/spaceship/
   button: Learn more
 
 - title: Going green
