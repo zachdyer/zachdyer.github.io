@@ -1,17 +1,17 @@
-- title: Zach Dyer Design
-  desc: I live in Ozark, Missouri where I am the lead designer at Zach Dyer Design.
-  img: /img/emblemRed.svg
-  url: http://zachdyerdesign.com
+- title: StarBorn
+  desc: StarBorn is a infinite space game in alpha.
+  img: /img/starborn.jpg
+  url: https://github.com/zachdyer/starborn
   button: Learn more »
 
-- title: One Heart
-  desc: I help collect food donations and redistribute them to families in need at One Heart.
-  img: /img/one-heart.jpg
-  url: https://www.youtube.com/watch?v=CjKBEVbmh5U
+- title: Sun Effect
+  desc: Sun animation I created for space trucking
+  img: /img/sun-effect.jpg
+  url: /sun-effect
   button: Learn more »
 
-- title: Music
-  desc: I've produced over 5 songs with DJ Dormee in Springfield, Missouri.
-  img: /img/dormee.jpg
-  url: https://soundcloud.com/dormee
+- title: Flower of Life
+  desc: An animation of the flower of life in alpha stage lol.
+  img: /img/flower-of-life.jpg
+  url: /flower-of-life
   button: Listen »
