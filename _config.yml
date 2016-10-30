@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Zach Dyer
-description: Jekyll starter template for Zach Dyer Design
+description: A website for Zach Dyer projects.
 
 address:
 city: Ozark
@@ -23,9 +23,7 @@ zip: 65721
 email: zach.dyer@gmail.com
 phone: +1 417 501 5670
 
-url: "http://zachdyer.com" # the base hostname & protocol for your site
-
-
+url: "zachdyer.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
