@@ -25,13 +25,14 @@ scripts:
     alertBox = document.getElementById('alert-box');
 
   binaryInput.addEventListener("input", function() {
-    if(zachdyerdesign.binary.convert(binaryInput.value)) {
+    if(zachdyerdesign.binary.convert(binaryInput.value) || zachdyerdesign.binary.convert(binaryInput.value) == 0) {
       alertBox.setAttribute('class', "alert alert-info");
       alertBox.innerHTML = "Enter a binary number and press the Convert Binary";
       wholeNumber.innerHTML = zachdyerdesign.binary.convert(binaryInput.value);
     } else {
       alertBox.setAttribute('class', "alert alert-danger");
-      alertBox.innerHTML = "You can only enter 0's or 1's!"
+      alertBox.innerHTML = "You can only enter 0's or 1's!";
+      wholeNumber.innerHTML = "";
     }
 
   });
