@@ -25,6 +25,10 @@ phone: +1 417 501 5670
 
 url: "zachdyer.com" # the base hostname & protocol for your site
 
+collections:
+  library:
+    output: true
+
 # Build settings
 markdown: kramdown
 

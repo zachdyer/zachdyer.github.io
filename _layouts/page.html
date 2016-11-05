@@ -23,5 +23,11 @@
 
     {% include scripts.html %}
 
+    {% if page.scripts %}
+    {% for script in page.scripts %}
+    <script type="text/javascript" src="{{ site.github.url}}/js/{{ script }}"></script>
+    {% endfor %}
+    {% endif %}
+
   </body>
 </html>
