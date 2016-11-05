@@ -4,8 +4,8 @@ layout: page
 desc: Tools for converting binary numbers to whole numbers
 img: /img/binary.png
 scripts:
-- library/zachdyerdesign.binary.js
-- library/zachdyerdesign.string.js
+- zachdyerdesign/binary.js
+- zachdyerdesign/string.js
 ---
 
 
@@ -28,7 +28,7 @@ scripts:
   binaryInput.addEventListener("input", function() {
     if(zachdyerdesign.binary.convert(binaryInput.value) || zachdyerdesign.binary.convert(binaryInput.value) == 0) {
       alertBox.setAttribute('class', "alert alert-info");
-      alertBox.innerHTML = "Enter a binary number and press the Convert Binary";
+      alertBox.innerHTML = "Enter a binary number";
       wholeNumber.innerHTML = zachdyerdesign.binary.convert(binaryInput.value);
     } else {
       alertBox.setAttribute('class', "alert alert-danger");
