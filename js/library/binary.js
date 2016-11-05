@@ -28,11 +28,8 @@ zachdyerdesign.binary = {
     for (i = 0; i < values.length; i++) {
       sum += values[i];
     }
-
-    if (sum === 0)
-      return true;
-    else
-      return sum;
+    
+    return sum;
 
   }
 };
