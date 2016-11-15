@@ -3,15 +3,21 @@
   background-color: #eee;
   bottom: 0;
   right: 50px;
-  margin: 10px;
 }
 
 .chat > .tab {
   background-color: #ccc;
   height: 30px;
+  cursor: pointer;
 }
 
 .chat > .input {
   position: absolute;
   bottom: 0px;
+}
+
+.chat > .output {
+  margin: 10px;
+  height: 220px;
+  overflow-y: scroll;
 }
