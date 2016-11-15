@@ -87,6 +87,7 @@ zachdyerdesign.chat = {
       case "salutations":
       case "sup":
       case "whats up":
+      case "howdy":
         return "Hi. How can I help you?";
 
       case "time":
@@ -96,12 +97,20 @@ zachdyerdesign.chat = {
       case "do you know the time":
         return "The time is " + this.getTime();
 
+      case "thanks":
+      case "thank you":
+      case "thank you so much":
+      case "appreciate it":
+      case "i appreciate it":
+      case "much ablidged":
+        return "My pleasure!";
+
       case "help":
       case "help me":
       case "need help":
       case "i need help":
       case "help needed":
-        return "You can say 'time'";
+        return "You can say '" + this.help() + "'";
 
       default:
         return "I do not understand '" + input + "'. Say 'help' to find out what you can ask for.";
@@ -133,5 +142,13 @@ zachdyerdesign.chat = {
     input = input.replace(/please/g, '');
     input = input.trim();
     return input;
+  },
+  help: function () {
+    let commands = [
+      'time',
+      'thanks'
+    ];
+    let help = commands[Math.floor(Math.random() * commands.length)];
+    return help;
   }
 };
