@@ -24,4 +24,6 @@
 
 .chat > .output > .response {
   text-align: right;
+  display: block;
+  white-space: normal;
 }

@@ -42,9 +42,10 @@ zachdyerdesign.chat = {
     p1.appendChild(input);
     this.output.appendChild(p1);
 
-    let response = document.createTextNode(this.respond(this.input.value));
+    let respond = this.respond(this.input.value);
+    let response = document.createTextNode(respond);
     let p2 = document.createElement("p");
-    p2.setAttribute("class", "response");
+    p2.setAttribute("class", "response label label-info");
     p2.appendChild(response);
     this.output.appendChild(p2);
   },
@@ -88,6 +89,7 @@ zachdyerdesign.chat = {
       case "sup":
       case "whats up":
       case "howdy":
+      case "yo":
         return "Hi. How can I help you?";
 
       case "time":
@@ -96,6 +98,11 @@ zachdyerdesign.chat = {
       case "tell me the time":
       case "do you know the time":
         return "The time is " + this.getTime();
+
+      case "date":
+      case "what is the date":
+      case "what is today":
+        return "The date is " + this.getDate();
 
       case "thanks":
       case "thank you":
@@ -133,6 +140,13 @@ zachdyerdesign.chat = {
     }
     return hour + ":" + minute + " " + ampm;
   },
+  getDate: function () {
+    let date = new Date();
+    let month = date.getMonth() + 1;
+    let day = date.getDate();
+    let year = date.getFullYear();
+    return month + "/" + day + "/" + year;
+  },
   sanitize: function (input) {
     input = input.toLowerCase();
     input = input.replace(/\?/g, '');
@@ -146,7 +160,8 @@ zachdyerdesign.chat = {
   help: function () {
     let commands = [
       'time',
-      'thanks'
+      'thanks',
+      'date'
     ];
     let help = commands[Math.floor(Math.random() * commands.length)];
     return help;
