@@ -104,6 +104,16 @@ zachdyerdesign.chat = {
       case "what is today":
         return "The date is " + this.getDate();
 
+      case "weather":
+      case "what is the weather":
+      case "what is the temperature":
+      case "temperature":
+      case "temp":
+      case "is it cold":
+      case "is it warm":
+      case "should i wear a jacket":
+        return this.getWeather();
+
       case "thanks":
       case "thank you":
       case "thank you so much":
@@ -146,6 +156,49 @@ zachdyerdesign.chat = {
     let day = date.getDate();
     let year = date.getFullYear();
     return month + "/" + day + "/" + year;
+  },
+  getWeather: function() {
+    if ("geolocation" in navigator) {
+      /* geolocation is available */
+      var self = this;
+      var readTextFile = function(file, callback) {
+          var rawFile = new XMLHttpRequest();
+          rawFile.overrideMimeType("application/json");
+          rawFile.open("GET", file, true);
+          rawFile.onreadystatechange = function() {
+              if (rawFile.readyState === 4 && rawFile.status == "200") {
+                  callback(rawFile.responseText);
+              }
+          }
+          rawFile.send(null);
+      }
+      var kelvinToFarenheit = function(k) {
+        return (1.8 * (k - 273) + 32).toFixed();
+      };
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var weatherapi = "4801667da8b0495bb28d134bf8aa21ff";
+        latitude  = position.coords.latitude;
+        longitude = position.coords.longitude;
+
+        readTextFile("http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + weatherapi, function(text){
+          var data = JSON.parse(text);
+          console.log(data);
+          let respond = "it's " + data.weather[0].main + " with a temperature of " + kelvinToFarenheit(data.main.temp) + " degrees in " + data.name;
+          let response = document.createTextNode(respond);
+          let p2 = document.createElement("p");
+          p2.setAttribute("class", "response label label-info");
+          p2.appendChild(response);
+          self.output.appendChild(p2);
+          self.scrollDown();
+        });
+
+      });
+      return "hmm";
+
+    } else {
+      return "Sorry I can't do weather right now.";
+    }
+
   },
   sanitize: function (input) {
     input = input.toLowerCase();
