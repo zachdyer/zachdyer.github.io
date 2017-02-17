@@ -11,25 +11,18 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li{% if page.url == "/" %} class="active"{% endif %}><a href="{{ site.github.url}}/">Home</a></li>
-        {% assign sorted_pages = site.pages | sort:"order" %}
-        {% for menu in sorted_pages %}
-        {% if menu.url != "/feed.xml" and menu.url != "/" and menu.url != "/assets/css/style.css" %}
-        <li{% if page.url == menu.url %} class="active"{% endif %}><a href="{{ site.github.url}}{{ menu.url }}">{{ menu.menu }}</a></li>
-        {% endif %}
-        {% endfor %}
-        <!-- <li class="dropdown">
-          <a href="{{ site.github.url}}/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="{{ site.github.url}}/#">Action</a></li>
-            <li><a href="{{ site.github.url}}/#">Another action</a></li>
-            <li><a href="{{ site.github.url}}/#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li class="dropdown-header">Nav header</li>
-            <li><a href="{{ site.github.url}}/#">Separated link</a></li>
-            <li><a href="{{ site.github.url}}/#">One more separated link</a></li>
+        {% for menu in site.menu.main %}
+        <li class='{% if page.url == menu.url %}current{% endif %}{% if menu.submenu %} submenu{% endif %}{% if menu.class %} {{ menu.class }}{% endif %}'>
+          <a href="{{ menu.urls }}">{{ menu.title }}</a>
+        {% if menu.submenu %}
+          <ul>
+          {% for submenu in menu.submenu %}
+            <li><a href="{{ submenu.url }}">{{ submenu.title }}</a></li>
+          {% endfor %}
           </ul>
-        </li> -->
+        {% endif %}
+        </li>
+        {% endfor %}
       </ul>
     </div>
   </div>

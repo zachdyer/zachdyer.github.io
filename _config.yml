@@ -34,3 +34,17 @@ markdown: kramdown
 
 gems:
   - jekyll-sitemap
+
+#menus
+menu:
+  main:
+    - title: Welcome
+      url: /
+    - title: Blog
+      url: /blog
+    - title: About
+      url: /about
+    - title: Library
+      url: /library
+    - title: Cheatsheet
+      url: /cheatsheet
