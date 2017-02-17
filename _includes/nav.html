@@ -14,7 +14,7 @@
         <li{% if page.url == "/" %} class="active"{% endif %}><a href="{{ site.github.url}}/">Home</a></li>
         {% assign sorted_pages = site.pages | sort:"order" %}
         {% for menu in sorted_pages %}
-        {% if menu.url != "/feed.xml" and menu.url != "/" %}
+        {% if menu.url != "/feed.xml" and menu.url != "/" and menu.url != "/assets/css/style.css" %}
         <li{% if page.url == menu.url %} class="active"{% endif %}><a href="{{ site.github.url}}{{ menu.url }}">{{ menu.menu }}</a></li>
         {% endif %}
         {% endfor %}
