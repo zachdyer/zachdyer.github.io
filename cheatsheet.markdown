@@ -1,10 +1,10 @@
 ---
 layout: page
-menu: Cheatsheet
 title: A cheatsheet of different bootstrap code snippets
 img: /img/bootstrap.png
 published: true
 order: 4
+permalink: cheatsheet
 ---
 
 <div class="page-header">

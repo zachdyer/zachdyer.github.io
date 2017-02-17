@@ -1,6 +1,5 @@
 ---
 layout: default
-menu: Home
 title: Web Games and Sites
 order: 1
 ---
