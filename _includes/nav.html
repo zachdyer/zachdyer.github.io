@@ -13,7 +13,7 @@
       <ul class="nav navbar-nav">
         {% for menu in site.menu.main %}
         <li class='{% if page.url == menu.url %}current{% endif %}{% if menu.submenu %} submenu{% endif %}{% if menu.class %} {{ menu.class }}{% endif %}'>
-          <a href="{{ menu.urls }}">{{ menu.title }}</a>
+          <a href="{{ menu.url }}">{{ menu.title }}</a>
         {% if menu.submenu %}
           <ul>
           {% for submenu in menu.submenu %}
