@@ -1,7 +1,7 @@
 <!-- START THE FEATURETTES -->
 
 {% for page in site.pages %}
-{% if page.url != "/" and page.url != "/feed.xml" %}
+{% if page.layout == "default" %}
 <hr class="featurette-divider">
 
 <div class="row featurette">
