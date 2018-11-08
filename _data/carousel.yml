@@ -5,7 +5,7 @@
   target: _blank
   button: Learn More
 
-- title: Spaceship
+- title: Spaceship HTML5 Game
   desc: This is a HTML5 spaceship game. Use the mouse to move the ship around and left click to shoot UFOs.
   img: /img/spaceship2.jpg
   link: https://github.com/zachdyer/spaceship/
